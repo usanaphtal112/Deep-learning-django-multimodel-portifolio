@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Test Model - Image Classification Project{% endblock %}
+
+{% block extra_css %}
+    <!-- Add any additional CSS specific to this page -->
+{% endblock %}
+
+{% block content %}
+    <header class="text-center">
+        <h1>Test Model</h1>
+    </header>
+    <section>
+        <form method="post" enctype="multipart/form-data" action="{% url 'test_model' %}">
+            {% csrf_token %}
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" accept="image/*" required class="form-control mb-2">
+            <label for="model">Choose Model:</label>
+            <select name="model" required class="form-control mb-2">
+                <option value="simple_ann">Simple ANN</option>
+                <option value="cnn">CNN</option>
+                <option value="lstm">LSTM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Test Model</button>
+        </form>
+    </section>
+{% endblock %}

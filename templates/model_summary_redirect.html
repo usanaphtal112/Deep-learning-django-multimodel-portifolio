@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Redirecting...{% endblock %}
+
+{% block content %}
+    <script>
+        window.location = "{% url 'model_summary_detail' chosen_model %}";
+    </script>
+{% endblock %}

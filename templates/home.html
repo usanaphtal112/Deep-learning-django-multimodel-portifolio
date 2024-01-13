@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Image Classification Project{% endblock %}
+{% load static %}
+{% block extra_css %}
+    <!-- Add any additional CSS specific to this page -->
+    <style>
+        /* Custom styles for the home page */
+        .jumbotron {
+            background-image: url("{% static 'images/deep-ai-bg-image.png' %}");
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin-top: 50px;
+            padding: 100px 0;
+        }
+
+        .jumbotron h1 {
+            font-size: 3em;
+        }
+
+        .jumbotron p {
+            font-size: 1.5em;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to Deep Learning Project - Batch-5</h1>
+        <p class="lead">Test different deep learning models for image classification with ease!</p>
+        <hr class="my-4">
+        <p>Choose a model, upload an image, and get instant results.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'test_model' %}" role="button">Get Started</a>
+    </div>
+
+    <!-- Add more sections or content as needed -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Model Testing</h2>
+            <p>Test your image classification models using various deep learning architectures, including Simple ANN, CNN, and LSTM.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Model Performance</h2>
+            <p>Check the performance metrics of your models, view graphical representations, and analyze the results.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Model Summary</h2>
+            <p>Get a detailed summary of your models, including architecture, layers, and configuration.</p>
+        </div>
+    </div>
+{% endblock %}

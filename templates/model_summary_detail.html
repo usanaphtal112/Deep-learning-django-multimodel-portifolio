@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Model Summary Detail - Image Classification Project{% endblock %}
+
+{% block extra_css %}
+    <!-- Add any additional CSS specific to this page -->
+    <style>
+        /* Custom styles for the model summary detail page */
+        header {
+            background-color: #343a40;
+            padding: 20px;
+            color: white;
+        }
+
+        section {
+            margin-top: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-width: 100%;
+            overflow: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <header class="text-center">
+        <h1>Model Summary Detail</h1>
+    </header>
+    <section>
+        <h2>Chosen Model: {{ chosen_model }}</h2>
+        <pre>
+            {% for line in model_summary %}
+                {{ line|safe }}
+            {% endfor %}
+        </pre>
+    </section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Model Result - Image Classification Project{% endblock %}
+
+{% block content %}
+   <style>
+        /* Your additional custom CSS styles can go here */
+        body {
+            background-color: #f8f9fa; /* Bootstrap default background color */
+        }
+        .result-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            border: 1px solid #dee2e6; /* Bootstrap default border color */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+        }
+    </style>
+<body>
+    <div class="container result-container">
+        <h2 class="text-center">Prediction Result</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Display the uploaded image -->
+                <img src="{{ image_path }}" class="img-fluid" alt="Uploaded Image">
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-8">
+                <!-- Display the predicted class -->
+                <p class="text-center">Predicted Class: {{ result }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
