@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Model Summary - Image Classification Project{% endblock %}
+{% block title %}Model Summary - Deep learning multimodel portfolio Project{% endblock %}
 
 {% block extra_css %}
     <!-- Add any additional CSS specific to this page -->
@@ -15,9 +15,14 @@
             {% csrf_token %}
             <label for="model_choice" class="mr-2 text-white">Choose Model:</label>
             <select name="model_choice" class="form-control mr-2" required>
-                {% for model in models %}
-                    <option value="{{ model }}">{{ model }}</option>
-                {% endfor %}
+                <option value="simple_ann" selected>Simple Artificial Neural Network(ANN)</option>
+                <option value="cnn">Convolutional Neural Network(CNN)</option>
+                <option value="vgg_cnn">VGG Net)</option>
+                <option value="simple_rnn">Simple Recurrent Neural Network(RNN)</option>
+                <option value="gru">Gated Recurrent Unit (GRU)</option>
+                <option value="lstm">Long Short-Term Memory (LSTM)</option>
+                <option value="birnn">Bidirectional RNN (BiRNN)</option>
+                <!-- Add other predefined models as needed -->
             </select>
             <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Check Model Summary</button>
         </form>

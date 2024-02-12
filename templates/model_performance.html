@@ -1,25 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Model Performance - Image Classification Project{% endblock %}
 {% block extra_css %}
-    <!-- Add any additional CSS specific to this page -->
-    <style>
-        /* Custom styles for the model performance page */
-        header {
-            background-color: #343a40;
-            padding: 20px;
-            color: white;
-        }
 
-        section {
-            margin-top: 30px;
-        }
-
-        /* Adjusted the form styling */
-        .model-performance-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    </style>
 {% endblock %}
 
 {% block content %}
@@ -33,9 +15,13 @@
     {% csrf_token %}
     <label for="model_choice" class="mr-2 text-white">Choose Model:</label>
     <select name="model_choice" class="form-control mr-2" required>
-        <option value="simple_ann" selected>Simple ANN</option>
-        <option value="cnn">CNN</option>
-        <option value="lstm">LSTM</option>
+        <option value="simple_ann" selected>Simple Artificial Neural Network(ANN)</option>
+        <option value="cnn">Convolutional Neural Network(CNN)</option>
+        <option value="vgg_cnn">VGG Net)</option>
+        <option value="simple_rnn">Simple Recurrent Neural Network(RNN)</option>
+        <option value="gru">Gated Recurrent Unit (GRU)</option>
+        <option value="lstm">Long Short-Term Memory (LSTM)</option>
+        <option value="birnn">Bidirectional RNN (BiRNN)</option>
         <!-- Add other predefined models as needed -->
     </select>
     <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Check Model Performance</button>

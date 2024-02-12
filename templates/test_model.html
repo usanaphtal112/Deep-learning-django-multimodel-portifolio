@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Test Model - Image Classification Project{% endblock %}
+{% block title %}Test Model - Deep learning multimodel portfolio Project{% endblock %}
 
 {% block extra_css %}
     <!-- Add any additional CSS specific to this page -->
@@ -17,9 +17,13 @@
             <input type="file" name="image" accept="image/*" required class="form-control mb-2">
             <label for="model">Choose Model:</label>
             <select name="model" required class="form-control mb-2">
-                <option value="simple_ann">Simple ANN</option>
-                <option value="cnn">CNN</option>
-                <option value="lstm">LSTM</option>
+                <option value="simple_ann" selected>Simple Artificial Neural Network(ANN)</option>
+                <option value="cnn">Convolutional Neural Network(CNN)</option>
+                <option value="vgg_cnn">VGG Net)</option>
+                <option value="simple_rnn">Simple Recurrent Neural Network(RNN)</option>
+                <option value="gru">Gated Recurrent Unit (GRU)</option>
+                <option value="lstm">Long Short-Term Memory (LSTM)</option>
+                <option value="birnn">Bidirectional RNN (BiRNN)</option>
             </select>
             <button type="submit" class="btn btn-primary">Test Model</button>
         </form>

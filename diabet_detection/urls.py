@@ -1,7 +1,5 @@
 # image_classification_app/urls.py
 from django.urls import path
-from django.conf import settings
-from django.conf.urls.static import static
 from .views import HomeView, TestModelView, ResultView, ModelPerformanceView, ModelSummaryView, ModelSummaryDetailView, ModelPerformanceDetailView
 
 urlpatterns = [
@@ -13,4 +11,3 @@ urlpatterns = [
     path('model_summary/', ModelSummaryView.as_view(), name='model_summary'),
     path('model_summary/<str:model_name>_model_summary/', ModelSummaryDetailView.as_view(), name='model_summary_detail'),
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

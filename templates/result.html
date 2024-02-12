@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Model Result - Image Classification Project{% endblock %}
+{% block title %}Model Result - Deep learning multimodel portfolio Project{% endblock %}
 
 {% block content %}
    <style>
@@ -24,7 +24,8 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <!-- Display the uploaded image -->
-                <img src="{{ image_path }}" class="img-fluid" alt="Uploaded Image">
+<!--                <img src="{{ image_response.content }}" class="img-fluid" alt="Uploaded Image">-->
+                <img src="data:image/jpeg;base64,{{ image_data }}" class="img-fluid" alt="Uploaded Image">
             </div>
         </div>
         <div class="row justify-content-center mt-3">
