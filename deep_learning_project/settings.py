@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i(x38fmox%7jl=+h9(2kx%0a&r6-qa=)44)if2%1vdj&m$2)fo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'localhost']
 
 
 # Application definition
@@ -69,17 +69,18 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'deep_learning_project.wsgi.application'
-
+# vercel configurations
+# WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
