@@ -1,0 +1,15 @@
+footer {
+  background-color: #343a40; /* Dark background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Center-align text */
+  padding: 20px; /* Add some padding */
+}
+
+footer a {
+  color: #6c757d; /* Light gray text color for links */
+  text-decoration: none; /* Remove default underline */
+}
+
+footer a:hover {
+  color: #fff; /* Change link color on hover */
+}
