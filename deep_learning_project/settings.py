@@ -79,15 +79,15 @@ WSGI_APPLICATION = "deep_learning_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": env.str("POSTGRES_DATABASE"),
-#         "USER": env.str("POSTGRES_USER"),
-#         "HOST": env.str("POSTGRES_HOST"),
-#         "PASSWORD": env.str("POSTGRES_PASSWORD"),
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env.str("POSTGRES_DATABASE"),
+        "USER": env.str("POSTGRES_USER"),
+        "HOST": env.str("POSTGRES_HOST"),
+        "PASSWORD": env.str("POSTGRES_PASSWORD"),
+    }
+}
 
 # DATABASES = {
 #     "default": {
